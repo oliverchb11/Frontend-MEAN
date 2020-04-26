@@ -1,0 +1,87 @@
+<div class="container mt-3">
+  <h4 class="text-center">Libros:</h4>
+  <input
+    type="text"
+    class="form-control buscadorLibros"
+    placeholder="Buscar libro..."
+    name="buscarLibro"
+    [(ngModel)]="buscarLibro"
+  />
+  <div class="row">
+    <div
+      class="col col-sm-4 mt-3"
+      *ngFor="let libros of librosComponentJs | librospipe: buscarLibro"
+    >
+      <div class="card bg-dark" style="width: 18rem;">
+        <img
+          class="card-img-top"
+          height="230"
+          [src]="libros.cover"
+          alt="Card image cap"
+        />
+        <div class="card-body divcard">
+          <h5 class="card-title"><span>Titulo:</span></h5>
+          <h5 class="card-title">{{ libros.title }}</h5>
+          <h5 class="card-title"><span>Autor:</span> {{ libros.author }}</h5>
+          <h5 class="card-title">
+            <span>Lenguaje:</span> {{ libros.language }}
+          </h5>
+          <h5 class="card-title"><span>Paginas:</span> {{ libros.pages }}</h5>
+          <a [href]="libros.url_details" target="_blank">Mas detalles</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col col-sm-4 mt-3"
+      *ngFor="let librosSql of librosComponentSql | librospipe: buscarLibro"
+    >
+      <div class="card bg-dark" style="width: 18rem;">
+        <img
+          class="card-img-top"
+          height="230"
+          [src]="librosSql.cover"
+          alt="Card image cap"
+        />
+        <div class="card-body divcard">
+          <h5 class="card-title"><span>Titulo:</span></h5>
+          <h5 class="card-title">{{ librosSql.title }}</h5>
+          <h5 class="card-title"><span>Autor:</span> {{ librosSql.author }}</h5>
+          <h5 class="card-title">
+            <span>Lenguaje:</span> {{ librosSql.language }}
+          </h5>
+          <h5 class="card-title">
+            <span>Paginas:</span> {{ librosSql.pages }}
+          </h5>
+          <a [href]="librosSql.url_details" target="_blank">Mas detalles</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col col-sm-4 mt-3"
+      *ngFor="let librosMsql of librosComponentMsql | librospipe: buscarLibro"
+    >
+      <div class="card bg-dark" style="width: 18rem;">
+        <img
+          class="card-img-top"
+          height="230"
+          [src]="librosMsql.cover"
+          alt="Card image cap"
+        />
+        <div class="card-body divcard">
+          <h5 class="card-title"><span>Titulo:</span></h5>
+          <h5 class="card-title">{{ librosMsql.title }}</h5>
+          <h5 class="card-title">
+            <span>Autor:</span> {{ librosMsql.author }}
+          </h5>
+          <h5 class="card-title">
+            <span>Lenguaje:</span> {{ librosMsql.language }}
+          </h5>
+          <h5 class="card-title">
+            <span>Paginas:</span> {{ librosMsql.pages }}
+          </h5>
+          <a [href]="librosMsql.url_details" target="_blank">Mas detalles</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
