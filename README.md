@@ -1,4 +1,5 @@
 # Frontend
+Desarollo de el frontend utilizando el stack MEAN para el CRUD de la API CRUD-MEAN-API , herramientas Angular, TypeScript
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
